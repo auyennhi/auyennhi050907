@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cảm ơn đóng góp của bạn! </title>
+    <meta charset="utf-8">
+    <style>
+        body {
+            position: relative; /* Thêm position relative cho body */
+            overflow: hidden; /* Ẩn phần mã nhị phân tràn ra ngoài */
+        }
+
+        .binary-background {
+            position: fixed; /* Sử dụng position fixed để mã nhị phân chạy toàn trang */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Cho phép tương tác với nội dung bên trên */
+            z-index: -1; /* Đặt mã nhị phân phía sau nội dung */
+        }
+
+        .binary-background span {
+            position: absolute;
+            color: #0f0;
+            white-space: nowrap;
+            animation: binary-flow linear infinite;
+        }
+
+        @keyframes binary-flow {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(400%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="binary-background"></div>
+    <h2 style="color:darkslategray; text-align: center; margin-top: 100px;">Cảm ơn đóng góp của các bạn!</h2>
+    <p style="font-size: 30px; color: tomato; text-align: center;">
+        <em><strong>Chúng mình sẽ nỗ lực hơn trong việc cải tạo web và cập nhật thông tin sớm nhất để phục vụ cho nhu cầu của các bạn. Chúc các bạn một ngày tốt lành!!!</strong></em>
+    </p>
+
+    <script>
+    	const binaryBackground = document.querySelector(".binary-background");
+
+    	function createBinaryStream() {
+        	const stream = document.createElement("span");
+        	const length = Math.floor(Math.random() * 20) + 10;
+        	for (let i = 0; i < length; i++) {
+        	    stream.textContent += Math.round(Math.random());
+        	}
+        	stream.style.fontSize = Math.floor(Math.random() * 16) + 8 + "px";
+        	stream.style.top = Math.random() * 100 + "%";
+        	stream.style.animationDuration = Math.random() * 5 + 5 + "s";
+
+        	// Tính toán thời gian biến mất dựa trên animationDuration
+        	const animationDurationMs = parseFloat(stream.style.animationDuration) * 1000;
+
+        	// Thêm stream vào nền
+        	binaryBackground.appendChild(stream);
+
+        	// Đặt timeout để xóa stream sau khi animation kết thúc
+        	setTimeout(() => {
+         	   stream.remove();
+        	}, animationDurationMs);
+    	}
+
+    	setInterval(createBinaryStream, 100);
+	</script>
+</body>
+</html>

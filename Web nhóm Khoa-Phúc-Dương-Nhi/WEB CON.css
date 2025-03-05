@@ -1,0 +1,57 @@
+body {font-family: Lora;margin: 0;padding: 0;background-color: #f0f0f0;}
+
+        .section1 {background-color: lightsteelblue;margin: 20px;border-radius: 8px;padding: 20px}
+
+        .section2 {background-color: mistyrose;margin: 20px;padding: 20px;border-radius: 8px;}
+
+        .section1 h1 {text-align: center;margin-bottom: 20px;font-size: 100px}
+
+        .section1 h2 {text-align: center;margin-bottom: 20px;font-size: 70px}
+
+        .section1 h3 {;margin-bottom: 20px;font-size: 20px; color:tomato;}
+
+        .section2 h2 {text-align: center;margin-bottom: 20px;font-size: 70px}
+
+        .mo_ta1{color:darkcyan;font-size:30px;}
+
+        .mo_ta2{color:white;font-size:20px;margin-bottom: 5px}
+
+        .mo_ta1 li{margin-bottom: 10px;}
+
+        .container{text-align: center}
+
+        .grid-container1 {display: grid;grid-template-columns: repeat(3, 1fr);grid-column-gap:100px;}
+
+        .grid-container2 {display: grid;grid-template-columns: repeat(2, 1fr);grid-column-gap:100px;}
+
+        .grid-item1 {border: 1px solid #ddd;padding: 15px;border-radius: 8px;text-align: center;}
+
+        .grid-item2 {border: 0px solid #ddd;padding: 15px;border-radius: 20px;}
+
+        .image-placeholder {width: 100%;height: 150px;background-color: #eee; margin-bottom: 10px;}
+
+        .skill-list {list-style-type: none;padding: 0;}
+
+        .skill-list li {margin-bottom: 5px;}
+
+        .field-list {list-style-type: none;padding: 0;}
+
+        .field-list li {margin-bottom: 5px;}
+        
+        .khung_mo_ta{background-color:#1A3160;text-align:left;overflow:hidden;}
+
+        .hinh_anh{border-radius:25px;}
+
+        .region{padding:20px;border-style:hidden;border-color:background-color:#1A3160;border-radius:25px;}
+
+        .khungchu{height:250px;width:700px;}
+
+        .il{display:inline;}
+
+        .picture{display:flex;height:100px;gap:20px;}
+
+        .picture div{flex:1;border-radius: 1rem;background-position:right;background-repeat:no-repeat;background-size:200%;transition:all 0.8s cubic-bezier(0.25,0.4,0.45,1.4);}
+
+        .picture div:hover{flex:5;}
+
+        .hinh_anh{border-radius:25px; height:200px;}
